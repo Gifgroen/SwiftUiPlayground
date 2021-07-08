@@ -16,7 +16,6 @@ struct MapKitView: View {
   
   var body: some View {
     VStack {
-      Text("Hello, Map!")
       Map(coordinateRegion: $region)
     }
     
