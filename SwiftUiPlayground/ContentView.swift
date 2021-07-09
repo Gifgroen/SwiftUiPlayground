@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
       VStack {
         MapKitView()
+          .ignoresSafeArea()
           .frame(height: 256)
 
         CircleImageView()
@@ -24,12 +25,22 @@ struct ContentView: View {
 
           HStack {
             Text("Joshua Tree national Park")
-              .font(.subheadline)
             Spacer()
             Text("California")
-              .font(.subheadline)
           }
-        }.padding()
+          .font(.subheadline)
+          .foregroundColor(.secondary)
+          
+          Divider()
+          
+          Text("About Turtle Rock")
+            .font(.title2)
+          Text("Description goes here")
+          
+        }
+        .padding()
+        
+        Spacer()
       }
     }
 }
